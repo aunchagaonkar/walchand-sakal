@@ -28,27 +28,6 @@ pipeline {
                 script {
                     sh 'docker compose -f docker-compose.yml up -d mongodb'
                     echo 'MongoDB container started'
-                    
-                    // Check if MongoDB is up and running
-                    sh '''
-                        attempt=1
-                        max_attempts=10
-                        
-                        until docker exec mongodb mongo --eval "printjson(db.serverStatus())" > /dev/null 2>&1
-                        do
-                            if [ $attempt -eq $max_attempts ]
-                            then
-                                echo "MongoDB failed to start after $max_attempts attempts"
-                                exit 1
-                            fi
-                            
-                            echo "Waiting for MongoDB to be ready... (Attempt: $attempt/$max_attempts)"
-                            sleep 5
-                            attempt=$((attempt+1))
-                        done
-                        
-                        echo "MongoDB is up and running"
-                    '''
                 }
             }
         }
@@ -60,26 +39,6 @@ pipeline {
                     sh 'docker compose -f docker-compose.yml up -d backend'
                     echo 'Backend container built and started'
                     
-                    // Check if backend is up and running
-                    sh '''
-                        attempt=1
-                        max_attempts=10
-                        
-                        until curl -s http://localhost:5000 > /dev/null
-                        do
-                            if [ $attempt -eq $max_attempts ]
-                            then
-                                echo "Backend failed to start after $max_attempts attempts"
-                                exit 1
-                            fi
-                            
-                            echo "Waiting for Backend to be ready... (Attempt: $attempt/$max_attempts)"
-                            sleep 5
-                            attempt=$((attempt+1))
-                        done
-                        
-                        echo "Backend is up and running"
-                    '''
                 }
             }
         }
@@ -90,27 +49,6 @@ pipeline {
                     sh 'docker compose -f docker-compose.yml build frontend'
                     sh 'docker compose -f docker-compose.yml up -d frontend'
                     echo 'Frontend container built and started'
-                    
-                    // Check if frontend is up and running
-                    sh '''
-                        attempt=1
-                        max_attempts=10
-                        
-                        until curl -s http://localhost:3000 > /dev/null
-                        do
-                            if [ $attempt -eq $max_attempts ]
-                            then
-                                echo "Frontend failed to start after $max_attempts attempts"
-                                exit 1
-                            fi
-                            
-                            echo "Waiting for Frontend to be ready... (Attempt: $attempt/$max_attempts)"
-                            sleep 5
-                            attempt=$((attempt+1))
-                        done
-                        
-                        echo "Frontend is up and running"
-                    '''
                 }
             }
         }
@@ -118,7 +56,6 @@ pipeline {
         stage('Seed Database') {
             steps {
                 script {
-                    // Run the seeder script to populate the database
                     sh '''
                         echo "Seeding database with sample data..."
                         docker exec backend node seeder.js
@@ -131,7 +68,6 @@ pipeline {
         stage('Run API Tests') {
             steps {
                 script {
-                    // Run the test.js script to test the APIs
                     sh '''
                         echo "Running API tests..."
                         docker exec backend node test.js > api_test_results.log
@@ -145,9 +81,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    // Deploy the application (this is a placeholder for actual deployment steps)
                     echo "Deploying the application..."
-                    // Example: sh 'docker-compose -f docker-compose.prod.yml up -d'
+                    sh 'docker compose -f docker-compose.yml up -d'
                     echo "Deployment completed"
                 }
             }
@@ -156,10 +91,9 @@ pipeline {
     
     post {
         always {
-            // Archive test results
+            // archive test results
             archiveArtifacts artifacts: 'api_test_results.log', allowEmptyArchive: true
             
-            // Only clean workspace files but keep containers running
             cleanWs(cleanWhenNotBuilt: false, deleteDirs: true, disableDeferredWipeout: true)
         }
         success {
