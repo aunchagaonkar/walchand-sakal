@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/ui/HeroSection";
 import FeaturedTalk from "@/components/ui/FeaturedTalk";
 import SpeakerCard from "@/components/ui/SpeakerCard";
+import NewsletterSubscription from "@/components/ui/newsletter/NewsletterSubscription";
 
 // Create interfaces for data
 interface FeaturedTalkType {
@@ -170,22 +171,10 @@ const Index = () => {
           </div>
         </section>
         
-        {/* CTA Section */}
+        {/* Newsletter Subscription Section */}
         <section className="py-20 px-6 md:px-10 bg-white">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-medium">Join our community</h2>
-            <p className="text-foreground/70 mt-4 max-w-3xl mx-auto">
-              Be the first to know about new lectures, special events, and exclusive content
-              from our thought leaders.
-            </p>
-            <div className="mt-10">
-              <Button asChild size="lg">
-                <Link to="/about">
-                  <span>Learn More</span>
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
+          <div className="max-w-5xl mx-auto">
+            <NewsletterSubscription />
           </div>
         </section>
       </main>

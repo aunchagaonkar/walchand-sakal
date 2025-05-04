@@ -12,6 +12,7 @@ const featuredSpeakerRoutes = require('./routes/featuredSpeakerRoutes');
 const authRoutes = require('./routes/authRoutes');
 const aboutContentRoutes = require('./routes/aboutContentRoutes');
 const settingsRoutes = require('./routes/settingsRoutes');
+const newsletterRoutes = require('./routes/newsletterRoutes');
 
 // Load env vars
 dotenv.config();
@@ -40,6 +41,7 @@ app.use('/api/featured-speakers', featuredSpeakerRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/about-content', aboutContentRoutes);
 app.use('/api/settings', settingsRoutes);
+app.use('/api/newsletter', newsletterRoutes);
 
 // Basic route
 app.get('/', (req, res) => {
@@ -59,4 +61,4 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
-}); 
+});
