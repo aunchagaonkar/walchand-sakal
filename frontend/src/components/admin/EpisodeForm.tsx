@@ -9,7 +9,6 @@ import { ArrowLeft, Sparkles } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { useToast } from "@/components/ui/use-toast";
 
-// Function to extract YouTube ID from various YouTube URL formats
 function extractYoutubeId(url) {
   if (!url) return null;
   
@@ -57,12 +56,11 @@ const EpisodeForm: React.FC<EpisodeFormProps> = ({ isEdit = false }) => {
   const { id } = useParams();
   const { toast } = useToast();
 
-  // Format today's date as YYYY-MM-DD for the date input default
   const today = new Date().toISOString().split('T')[0];
 
   useEffect(() => {
     if (!isEdit || !id) {
-      // For new episodes, set today's date by default
+      // for new episodes, set today's date by default
       setFormData(prev => ({...prev, date: today}));
       return;
     }
@@ -79,7 +77,7 @@ const EpisodeForm: React.FC<EpisodeFormProps> = ({ isEdit = false }) => {
         const data = await response.json();
 
         if (data.success) {
-          // Format date from API to YYYY-MM-DD for input
+          // format date from API to YYYY-MM-DD for input
           const apiDate = new Date(data.data.date);
           const formattedDate = apiDate.toISOString().split('T')[0];
 

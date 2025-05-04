@@ -124,7 +124,7 @@ const About = () => {
                 <div className="relative">
                   <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent rounded-tl-xl"></div>
                   <img
-                    src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                    src="https://res.cloudinary.com/dg2mm9fsw/image/upload/v1746339231/crmzd8wsici5a3pldtzt.jpg"
                     alt="A speaker giving a talk on stage"
                     className="rounded-xl w-full h-auto object-cover relative z-10 shadow-xl"
                   />
@@ -193,7 +193,7 @@ const About = () => {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="text-3xl md:text-4xl font-medium">Our Team</h2>
               <p className="text-foreground/70 mt-4">
-                Meet the passionate individuals who make Walchand-Sakal Lecture Series possible.
+                Meet the passionate developers who made the Walchand-Sakal Lecture Series website possible.
               </p>
             </div>
             
@@ -212,18 +212,20 @@ const About = () => {
                 Failed to load team data. Please try again later.
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {teamMembers.map((member) => (
-                  <div key={member._id} className="text-center">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-32 h-32 object-cover rounded-full mx-auto"
-                    />
-                    <h3 className="text-xl font-medium mt-4">{member.name}</h3>
-                    <p className="text-foreground/70">{member.role}</p>
-                  </div>
-                ))}
+              <div className="flex justify-center w-full">
+                <div className="flex flex-wrap justify-center gap-x-16 gap-y-12">
+                  {teamMembers.map((member) => (
+                    <div key={member._id} className="text-center w-[250px]">
+                      <img 
+                        src={member.image} 
+                        alt={member.name}
+                        className="w-32 h-32 object-cover rounded-full mx-auto"
+                      />
+                      <h3 className="text-xl font-medium mt-4">{member.name}</h3>
+                      <p className="text-foreground/70">{member.role}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
