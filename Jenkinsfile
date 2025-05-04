@@ -58,7 +58,9 @@ pipeline {
                 script {
                     sh '''
                         echo "Seeding database with sample data..."
-                        docker exec backend node seeder.js
+                        # Get the actual container name
+                        BACKEND_CONTAINER=$(docker ps --filter "name=backend" --format "{{.Names}}")
+                        docker exec $BACKEND_CONTAINER node seeder.js
                         echo "Database seeding completed"
                     '''
                 }
@@ -70,7 +72,9 @@ pipeline {
                 script {
                     sh '''
                         echo "Running API tests..."
-                        docker exec backend node test.js > api_test_results.log
+                        # Get the actual container name
+                        BACKEND_CONTAINER=$(docker ps --filter "name=backend" --format "{{.Names}}")
+                        docker exec $BACKEND_CONTAINER node test.js > api_test_results.log
                         echo "API testing completed"
                         cat api_test_results.log
                     '''

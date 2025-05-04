@@ -70,6 +70,12 @@ const importData = async () => {
         delete newItem.__v;
         delete newItem.createdAt;
         delete newItem.updatedAt;
+        
+        // Convert MongoDB date objects
+        if (newItem.date && typeof newItem.date === 'object' && newItem.date.$date) {
+          newItem.date = new Date(newItem.date.$date);
+        }
+        
         return newItem;
       });
     };
