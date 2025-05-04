@@ -24,7 +24,7 @@ const HeroSection = () => {
             {/* Main heading */}
             <h1 className="elegant-title text-6xl md:text-7xl lg:text-8xl leading-tight">
               Ideas that <br />
-              <span className="text-primary font-normal">shape today</span>
+              <span className="text-primary font-normal">shape tomorrow</span>
             </h1>
             
             {/* Description */}
