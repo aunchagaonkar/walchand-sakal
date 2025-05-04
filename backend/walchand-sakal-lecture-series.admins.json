@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "67d85a8881d225d4fa1c69a2"
+  },
+  "username": "admin",
+  "password": "$2b$10$AnDRie0opeOJlIszlBFylOOV3bZJiBrmu2F78QQK3IsFdXoKUlhIy",
+  "name": "Admin User",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2025-03-17T17:23:20.178Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-17T17:23:20.178Z"
+  },
+  "__v": 0
+}]

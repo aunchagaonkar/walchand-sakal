@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "67d85a8881d225d4fa1c6982"
+  },
+  "name": "Mr. Atul Kahate",
+  "role": "IT Professional",
+  "organization": "C-DAC, Pune",
+  "image": "https://media.licdn.com/dms/image/v2/D4D03AQHEAjqDep1bEQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1693377084563?e=1749081600&v=beta&t=9a0wWGu8obUtJtSb1d8sY-i98vxodaehiSMEXVNDEbw",
+  "bio": "IT Professional, Author and Trainer with 30 years of Industry Experience, Recipient of numerous prestigious honors, including the Granthakar Puraskar, Indradhanu-Maharashtra Times Award, and Maharashtra State Literature Award, Regular contributor to Marathi newspapers and TV channels, Authors of 80 books, 25 books in Marathi",
+  "topics": [
+    "AI Ethics",
+    "Human-Computer Interaction",
+    "AI Revolution"
+  ],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-03-17T17:23:20.157Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-03T18:19:54.456Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67f4a44c206ce5251e6c40f0"
+  },
+  "name": "Mr. Vivek Sawant",
+  "role": "Chief Mentor of Maharashtra Knowledge Corporation Limited (MKCL)",
+  "organization": "MKCL India",
+  "image": "https://pbs.twimg.com/profile_images/1171043350310338561/Z4Cdxtw0_400x400.jpg",
+  "bio": "Hon. Mr. Vivek Sawant is the Chief Mentor of Maharashtra Knowledge Corporation Limited (MKCL) India since in 2020. ...... Subhash Patil MKCL Nashik",
+  "topics": [
+    "AI",
+    "Future Careers"
+  ],
+  "createdAt": {
+    "$date": "2025-04-08T04:21:32.003Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-08T04:21:32.003Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c6699206ce5251e6c4250"
+  },
+  "name": "Shri. Achyut Godbole",
+  "role": "Writer, Businessman",
+  "organization": "NA",
+  "image": "data:image/jpeg;base64,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",
+  "bio": "He had deep interest in music and literature and also in mathematics and science. He doesn't study to gain marks but used to cherish the inherent beauty these subjects hold. He seemed to get attracted to people who are much more brilliant to him and made him learn new subjects and things.",
+  "topics": [
+    "IT Technology",
+    "Maths and Science"
+  ],
+  "createdAt": {
+    "$date": "2025-04-26T04:52:41.730Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T04:52:41.730Z"
+  },
+  "__v": 0
+}]

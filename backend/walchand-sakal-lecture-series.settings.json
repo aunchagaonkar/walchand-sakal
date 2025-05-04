@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "67d85f354aee7638abe56f76"
+  },
+  "siteName": "Walchand Lecture Series",
+  "siteTagline": "Insights from industry innovators",
+  "contactEmail": "",
+  "contactPhone": "",
+  "contactAddress": "",
+  "socialLinks": {
+    "twitter": "",
+    "facebook": "",
+    "instagram": "",
+    "linkedin": "",
+    "youtube": ""
+  },
+  "footer": {
+    "copyrightText": "© 2025 Walchand-Sakal Lecture Series. All rights reserved.",
+    "showSocialLinks": true
+  },
+  "meta": {
+    "description": "",
+    "keywords": ""
+  },
+  "createdAt": {
+    "$date": "2025-03-17T17:43:17.831Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-31T11:10:43.216Z"
+  },
+  "__v": 0
+}]

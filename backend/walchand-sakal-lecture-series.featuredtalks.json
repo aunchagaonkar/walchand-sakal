@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "680c62c3206ce5251e6c4242"
+  },
+  "title": "Technology And Our Changing Future, a lecture by Shri. Achyut Godbole",
+  "speaker": "Shri. Achyut Godbole",
+  "speakerRole": "Writer",
+  "thumbnail": "https://media.assettype.com/esakal%2F2024-03%2Fffc4d1ed-7d2e-45cf-9a07-93f89ad75e5f%2Frushi__26_.jpg",
+  "duration": "2:29:09",
+  "featured": true,
+  "createdAt": {
+    "$date": "2025-04-26T04:36:19.567Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T04:36:19.567Z"
+  },
+  "__v": 0
+}]

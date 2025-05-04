@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "67d85a8881d225d4fa1c6996"
+  },
+  "label": "Episodes",
+  "value": "3",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-03-17T17:23:20.171Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T05:25:56.207Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d85a8881d225d4fa1c6998"
+  },
+  "label": "Viewers",
+  "value": "3K+",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-03-17T17:23:20.171Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T05:30:28.663Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67d85a8881d225d4fa1c6995"
+  },
+  "label": "Speakers",
+  "value": "3",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-03-17T17:23:20.171Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-26T05:26:54.635Z"
+  }
+}]
